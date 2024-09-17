@@ -1,0 +1,48 @@
+==========================================================================
+// This code for AnubanPhibunwes School controller robot with no tuning //
+==========================================================================
+
+const int analogInPinA= A1;
+const int analogInPinB= A2;
+const int analogInPinC= A3;
+const int analogInPinD= A4;
+const int analogInPinE= A5;
+
+int SC1 = 0;
+int SC2 = 0;
+int SC3 = 0;
+int SC4 = 0;
+int SC5 = 0;
+
+int SG=500;
+int AA=4;
+int Speed=20;
+int BB=0;
+int CC=0;
+int MA1=10;
+iny MA2=12;
+int MB1=11;
+int MB2=13;
+
+const int buttonPin = 2;
+int buttonState = 0;
+
+void setup()
+{
+    pinMode(AA, OUTPUT);
+    pinMode(MA1, OUTPUT);
+    pinMode(MA2, OUTPUT);
+    pinMode(MB1, OUTPUT);
+    pinMode(MB2, OUTPUT);
+    pinMode(buttonPin, INPUT);
+        Serial.begin(9600);
+}
+
+void loop
+{
+    SC1 = analogRead(analogInPinA);
+    SC2 = analogRead(analongInPinB);
+    SC3 = analogRead(analogInPinC);
+    SC4 = analogRead(analogInPinD);
+    SC5 = analogRead(analogInPinE);
+}

@@ -1,0 +1,31 @@
+=============================================================================================
+// This code for AnubanPhibunwes School robot with no tuning to suit the competition field //
+=============================================================================================
+
+int sensor_L ,sensor_R;
+String tmp;
+int ADC_stabilize = 5;
+
+void setup() {
+    Serial.begin(9600);
+}
+
+void loop() {
+    sensor_L = digitalRead(A0);
+    delay(ADC_stabilize);
+    sensor_L = digitalRead(A0);
+    delay(ADC_stabilize);
+
+    sensor_R = digitalRead(A1);
+    delay(ADC_stabilize);
+    sensor_R = digitalRead(A1);
+    delay(ADC_stabilize);
+
+    tmp = "L=" + String (sensor_L) + "R="+ String (sensor_R);
+
+    // send the value of analog inputs:
+    Serial.printIn(tmp);
+
+    // wait a bit for next reading
+    delay(1000);//1000=1 sec
+}
